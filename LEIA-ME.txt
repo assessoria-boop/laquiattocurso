@@ -1,0 +1,43 @@
+LAQUIATTO - CURSO DE BANHO E TOSA (Landing Page)
+================================================
+
+Design dark neon (rosa #ff1ca6 + ciano #00d2ff, fundo roxo-escuro),
+replicando o modelo laquiatto-curso.vercel.app com a copy nova (PDF).
+
+
+JA ESTA NA PASTA
+----------------
+index.html   -> a pagina completa (CSS e JS embutidos)
+logo.webp    -> logo usada no menu, rodape e favicon
+
+
+IMAGENS OPCIONAIS (a pagina funciona sem elas)
+----------------------------------------------
+Coloque na MESMA pasta, com estes nomes exatos:
+
+hero.png        -> imagem do hero (lado direito). Pode ser PNG com fundo
+                   transparente (foto/mascote/ilustracao do curso).
+                   Sem ela, o hero fica centralizado (fica bom do mesmo jeito).
+
+professor.webp  -> foto do coordenador William (secao do professor).
+                   Sem ela, a secao mostra so o texto.
+
+Dica: converta imagens em https://squoosh.app (WebP, qualidade 75-80).
+
+
+JA CONFIGURADO
+--------------
+- WhatsApp de TODOS os botoes: +55 11 91518-0843
+  Mensagens variam por contexto (inscricao, valor de cada plano, etc.)
+- Numero NAO aparece escrito, so nos botoes.
+- Planos (Banhista, Iniciante, Intermediario, Avancado) com valor "Consulte"
+  e botao "QUERO SABER O VALOR". Quando tiver os valores, e so trocar
+  "Consulte" pelo preco em cada bloco .price-value.
+- Tabela de ganhos (Banhista / Tosador / Tosador especialista).
+- Depoimentos reais (Mikele, Jandira, Flavia, Gabrielly) em carrossel.
+- FAQ com horarios, conteudos, experiencia e certificado.
+- 2 unidades no mapa: Santo Andre e Sao Bernardo (Rudge Ramos).
+- Instagram: @laquiatto_pet_store
+- Google Tag Manager: GTM-5FG65KK9 (mesmo tag Laquiatto, carregamento adiado).
+  Se o curso usar um GTM diferente, troque "GTM-5FG65KK9" no final do index.html.
+- Totalmente responsivo (desktop, tablet e celular) com menu hamburguer.

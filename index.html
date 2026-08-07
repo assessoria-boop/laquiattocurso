@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Transforme sua paix&#xe3;o por pets em uma carreira de sucesso com o Curso de Banho e Tosa da Laquiatto. Aprenda t&#xe9;cnicas modernas, conquiste estabilidade e liberdade financeira. Unidades em Santo Andr&#xe9; e S&#xe3;o Bernardo do Campo." />
+  <title>Laquiatto | Curso Profissional de Banho e Tosa</title>
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" href="logo.webp" type="image/webp" />
+  <link rel="apple-touch-icon" href="logo.webp" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <style>
+    :root {
+      --primary: #ff1ca6;
+      --primary-glow: rgba(255, 28, 166, 0.5);
+      --secondary: #00d2ff;
+      --bg-dark: #0a0a0a;
+      --bg-gradient: linear-gradient(135deg, #1a0b2e 0%, #0a0a0a 100%);
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --text-white: #ffffff;
+      --text-gray: #b0b0b0;
+      --verde-wpp: #25D366;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, Helvetica, Arial, sans-serif;
+      --font-display: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section-padding { padding: 100px 0; }
+
+    .text-gradient {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+    }
+
+    /* HEADER / NAV */
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: var(--transition);
+    }
+    header.scrolled {
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 10px 0;
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .logo img { height: 60px; border-radius: 14px; display: block; }
+
+    .nav-menu { display: flex; list-style: none; gap: 26px; }
+    .nav-link {
+      color: var(--text-white);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+    .nav-link:hover { color: var(--primary); opacity: 1; }
+
+    .nav-units { display: flex; gap: 10px; }
+    .unit-tag {
+      font-size: 11px;
+      background: var(--primary);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .mobile-menu-icon {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .mobile-menu-icon span { width: 26px; height: 2px; background: var(--text-white); border-radius: 2px; }
+
+    .mobile-nav-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55);
+      opacity: 0; visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+    .mobile-nav-backdrop.active { opacity: 1; visibility: visible; }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0; right: -100%;
+      width: min(85vw, 320px);
+      height: 100vh;
+      background: rgba(10, 10, 10, 0.98);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-left: 1px solid var(--glass-border);
+      transition: right 0.3s ease;
+      z-index: 1001;
+      padding: 24px 20px;
+    }
+    .mobile-nav.open { right: 0; }
+    .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    .mobile-nav-title { font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+    .mobile-nav-close { background: transparent; border: none; color: var(--text-white); font-size: 28px; cursor: pointer; line-height: 1; }
+    .mobile-nav-list { list-style: none; display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center; }
+    .mobile-nav-list .nav-link { font-size: 18px; }
+
+    /* BOTOES */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 36px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      font-size: 15px;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary { background: linear-gradient(90deg, var(--primary), #ff4d6d); color: #fff; }
+    .btn-glow { box-shadow: 0 0 20px var(--primary-glow); }
+    .btn-glow:hover { transform: translateY(-5px); box-shadow: 0 0 50px var(--primary-glow); }
+    .btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    /* HERO */
+    .hero { padding: 170px 0 100px; position: relative; }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+    .hero.no-img .hero-grid { grid-template-columns: 1fr; max-width: 820px; margin: 0 auto; text-align: center; }
+    .hero.no-img .hero-subtitle { margin-left: auto; margin-right: auto; }
+    .hero.no-img .hero-stats { justify-content: center; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 28, 166, 0.1);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      animation: pulse 2s infinite;
+    }
+
+    .hero h1 { font-family: var(--font-display); font-weight: 800; font-size: 56px; letter-spacing: -1px; line-height: 1.12; margin-bottom: 24px; }
+    .hero-subtitle { font-size: 18px; color: var(--text-gray); margin-bottom: 36px; max-width: 600px; }
+
+    .hero-stats { display: flex; gap: 40px; margin-bottom: 40px; }
+    .stat-item { display: flex; flex-direction: column; }
+    .stat-number { font-size: 32px; font-weight: 700; color: var(--primary); }
+    .stat-text { font-size: 14px; color: var(--text-gray); }
+    .stat-divider { width: 1px; background: var(--glass-border); }
+
+    .hero-image { position: relative; }
+    .image-wrapper { position: relative; z-index: 1; }
+    .main-img { width: 100%; filter: drop-shadow(0 0 30px var(--primary-glow)); animation: float 6s ease-in-out infinite; }
+    .glow-effect {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120%; height: 120%;
+      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+      z-index: -1; opacity: 0.3;
+    }
+
+    /* SECTION HEADER */
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.5px; font-size: 44px; margin-bottom: 16px; line-height: 1.15; }
+    .section-header p { color: var(--text-gray); font-size: 18px; max-width: 640px; margin: 0 auto; }
+
+    /* UNIDADES */
+    .units-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .unit-card { padding: 30px; transition: var(--transition); }
+    .unit-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+    .unit-info h3 { font-size: 24px; margin-bottom: 10px; }
+    .unit-info p { font-size: 15px; color: var(--text-gray); margin-bottom: 20px; }
+    .map-container { height: 300px; border-radius: 16px; overflow: hidden; }
+    .map-container iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* HIGHLIGHT */
+    .highlight-section { padding: 60px 0; }
+    .highlight-card { padding: 40px; text-align: center; font-size: 23px; font-weight: 300; font-style: italic; }
+
+    /* VIDEO / O CURSO */
+    .video-wrapper { padding: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .video-wrapper.no-video { grid-template-columns: 1fr; text-align: center; }
+    .video-description { color: var(--text-gray); font-size: 16px; margin-top: 16px; }
+    .video-container-inner { width: 100%; }
+    .main-video { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); display: block; }
+    .curso-topicos { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .curso-topicos span { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 8px 16px; border-radius: 10px; font-size: 14px; }
+    .video-wrapper.no-video .curso-topicos { justify-content: center; }
+
+    /* PARA QUEM (cards) */
+    .cards-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+    .info-card { min-height: 260px; padding: 32px 24px; text-align: center; display: flex; flex-direction: column; transition: var(--transition); }
+    .info-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+    .card-icon {
+      width: 62px; height: 62px;
+      margin: 0 auto 20px;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, rgba(255,28,166,0.22) 0%, rgba(0,210,255,0.18) 100%);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
+      transition: var(--transition);
+    }
+    .card-icon svg {
+      width: 28px; height: 28px;
+      fill: none;
+      stroke: rgba(255,255,255,0.95);
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .info-card:hover .card-icon {
+      border-color: rgba(255,28,166,0.55);
+      background: linear-gradient(135deg, rgba(255,28,166,0.34) 0%, rgba(0,210,255,0.26) 100%);
+      box-shadow: 0 0 24px rgba(255,28,166,0.30), inset 0 1px 0 rgba(255,255,255,0.14);
+    }
+    .info-card h3 { font-size: 19px; margin-bottom: 12px; line-height: 1.3; }
+    .info-card p { color: var(--text-gray); font-size: 14px; }
+
+    .center-cta { text-align: center; margin-top: 50px; }
+
+    /* GANHOS (tabela de renda) */
+    .ganhos-card { max-width: 760px; margin: 0 auto; padding: 20px 40px 40px; }
+    .ganhos-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; padding: 26px 6px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .ganhos-row:last-of-type { border-bottom: none; }
+    .ganhos-nivel { display: flex; align-items: center; gap: 16px; text-align: left; }
+    .ganhos-nivel .g-ico {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(255, 28, 166, 0.12);
+      border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .ganhos-nivel .g-ico svg {
+      width: 26px; height: 26px;
+      stroke: var(--primary); fill: none;
+      stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .ganhos-nivel h4 { font-size: 19px; font-weight: 700; }
+    .ganhos-nivel small { color: var(--text-gray); font-size: 13px; display: block; }
+    .ganhos-valor { font-size: 26px; font-weight: 700; white-space: nowrap; }
+    .ganhos-nota { text-align: center; color: var(--text-gray); font-size: 16px; margin: 34px auto 0; max-width: 620px; line-height: 1.7; }
+    .ganhos-nota strong { color: var(--text-white); }
+
+    /* PRECOS */
+    .invest-hook { text-align: center; color: var(--text-gray); font-size: 16px; max-width: 640px; margin: -36px auto 50px; line-height: 1.7; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; align-items: stretch; }
+    .price-card { padding: 40px 24px 32px; text-align: center; position: relative; transition: var(--transition); display: flex; flex-direction: column; }
+    .price-card:hover { transform: translateY(-8px); border-color: var(--primary); }
+    .price-card.featured { border: 2px solid var(--primary); transform: scale(1.04); z-index: 2; }
+    .price-card.featured:hover { transform: scale(1.04) translateY(-8px); }
+    .featured-label {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--primary); padding: 5px 20px; border-radius: 20px;
+      font-size: 12px; font-weight: 700; white-space: nowrap;
+    }
+    .price-card h3 { font-size: 24px; margin-bottom: 12px; }
+    .price-value { font-size: 34px; font-weight: 700; margin-bottom: 24px; color: var(--text-white); }
+    .price-features { list-style: none; text-align: left; margin-bottom: 26px; flex-grow: 1; }
+    .price-features li { margin-bottom: 12px; color: var(--text-gray); font-size: 14px; line-height: 1.4; }
+    .price-features li::before { content: '\2713'; color: var(--primary); margin-right: 8px; font-weight: bold; }
+    .price-card .btn {
+      width: 100%; padding: 14px 18px; border-radius: 12px; font-size: 14px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary)); color: #fff;
+    }
+    .price-card.featured .btn { background: var(--primary); }
+    .price-card .btn:hover { transform: translateY(-4px); filter: brightness(1.15); box-shadow: 0 0 20px var(--primary-glow); }
+
+    /* PROFESSOR */
+    .professor-card { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; padding: 60px; align-items: center; }
+    .professor-img { position: relative; }
+    .professor-img img { width: 100%; border-radius: 24px; display: block; }
+    .img-glow { position: absolute; inset: -10px; background: var(--primary); filter: blur(40px); opacity: 0.2; z-index: -1; }
+    .professor-card.no-img { grid-template-columns: 1fr; max-width: 820px; margin: 0 auto; }
+    .label { color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; }
+    .professor-info h3 { font-size: 32px; margin: 10px 0 20px; }
+    .professor-bio { color: var(--text-gray); }
+    .professor-features { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 30px; }
+    .professor-features span { background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 10px; font-size: 14px; }
+
+    /* DEPOIMENTOS */
+    .testimonials-slider-wrapper { position: relative; overflow: hidden; max-width: 900px; margin: 0 auto; }
+    .testimonials-slider { display: flex; transition: transform 0.5s ease; }
+    .testimonial-card { min-width: 100%; padding: 44px; text-align: center; }
+    .testimonial-text { font-size: 18px; font-style: italic; margin-bottom: 26px; color: var(--text-white); }
+    .testimonial-author { font-weight: 700; color: var(--primary); font-size: 17px; }
+    .testimonial-author small { display: block; color: var(--text-gray); font-weight: 400; font-style: normal; font-size: 13px; margin-top: 4px; }
+    .slider-dots { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--glass-border); cursor: pointer; border: none; transition: var(--transition); padding: 0; }
+    .dot.active { background: var(--primary); width: 30px; border-radius: 10px; }
+
+    /* FAQ */
+    .faq-container { max-width: 800px; margin: 0 auto; }
+    .faq-item { margin-bottom: 15px; }
+    .faq-question {
+      width: 100%; padding: 22px 24px; text-align: left;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: 16px; color: #fff; font-size: 17px; font-weight: 600;
+      font-family: inherit; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px;
+      transition: var(--transition);
+    }
+    .faq-question:hover { border-color: var(--primary); }
+    .faq-question .faq-sinal { color: var(--primary); font-size: 24px; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.active .faq-sinal { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-out; padding: 0 24px; }
+    .faq-answer div { padding: 20px 0; color: var(--text-gray); }
+    .faq-answer strong { color: var(--text-white); }
+    .faq-item.active .faq-answer { max-height: 600px; }
+
+    /* FOOTER */
+    .footer { background: #050505; padding: 80px 0 40px; border-top: 1px solid var(--glass-border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    .footer-logo { height: 60px; border-radius: 14px; margin-bottom: 20px; }
+    .footer-brand p { color: var(--text-gray); max-width: 320px; }
+    .footer-links h4, .footer-social h4 { margin-bottom: 22px; font-size: 18px; }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: var(--text-gray); text-decoration: none; transition: var(--transition); }
+    .footer-links a:hover { color: var(--primary); }
+    .social-icons { display: flex; gap: 16px; }
+    .social-link {
+      width: 48px; height: 48px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+      color: var(--text-white); transition: var(--transition);
+    }
+    .social-link:hover { color: var(--primary); border-color: var(--primary); transform: translateY(-3px); }
+    .social-link svg { width: 24px; height: 24px; }
+    .footer-bottom { text-align: center; padding-top: 40px; border-top: 1px solid var(--glass-border); color: var(--text-gray); font-size: 14px; }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: var(--verde-wpp);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(37,211,102,0.45);
+      z-index: 1000; transition: var(--transition);
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width: 32px; height: 32px; fill: #fff; }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,28,166,0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(255,28,166,0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,28,166,0); }
+    }
+
+    /* ===== TABLET ===== */
+    @media (max-width: 992px) {
+      .hero-grid, .units-grid, .video-wrapper, .professor-card { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 46px; }
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+      .nav-menu, .nav-units { display: none; }
+      .mobile-menu-icon { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+      .professor-card { text-align: center; }
+      .professor-features { justify-content: center; }
+      .video-wrapper { text-align: center; }
+      .curso-topicos { justify-content: center; }
+    }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .section-padding { padding: 70px 0; }
+      .section-title { font-size: 32px; }
+      .section-header p { font-size: 16px; }
+      .hero { padding-top: 120px; }
+      .hero h1 { font-size: 34px; }
+      .hero-subtitle { font-size: 16px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .price-card.featured { transform: scale(1); }
+      .price-card.featured:hover { transform: translateY(-8px); }
+      .units-grid { display: flex; flex-direction: column; align-items: center; }
+      .unit-card { width: 100%; max-width: 500px; text-align: center; padding: 24px 18px; }
+      .map-container { height: 260px; }
+      .highlight-section { padding: 34px 0; }
+      .highlight-card { padding: 24px 18px; font-size: 17px; }
+      .video-wrapper { padding: 28px 18px; gap: 24px; }
+      .professor-card { padding: 32px 22px; }
+      .professor-info h3 { font-size: 26px; }
+      .ganhos-card { padding: 10px 20px 30px; }
+      .ganhos-row { flex-direction: column; text-align: center; gap: 10px; padding: 22px 0; }
+      .ganhos-nivel { flex-direction: column; text-align: center; gap: 8px; }
+      .ganhos-valor { font-size: 24px; }
+      .testimonial-card { padding: 30px 22px; }
+      .testimonial-text { font-size: 16px; }
+      .btn { width: 100%; }
+      .center-cta .btn, .hero-cta .btn { width: auto; }
+      .whatsapp-float { bottom: 20px; right: 20px; }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 { font-size: 29px; }
+      .section-title { font-size: 27px; }
+      .hero-stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container nav-container">
+      <div class="logo"><img src="logo.webp" alt="Laquiatto" width="60" height="60" /></div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#unidades" class="nav-link">Unidades</a></li>
+          <li><a href="#curso" class="nav-link">O Curso</a></li>
+          <li><a href="#pra-quem" class="nav-link">Para Quem?</a></li>
+          <li><a href="#ganhos" class="nav-link">Ganhos</a></li>
+          <li><a href="#precos" class="nav-link">Pre&#xe7;os</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-units">
+        <span class="unit-tag">Santo Andr&#xe9;</span>
+        <span class="unit-tag">S&#xe3;o Bernardo</span>
+      </div>
+      <button class="mobile-menu-icon" id="mobileMenuIcon" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+      <div class="mobile-nav-header">
+        <span class="mobile-nav-title">Navega&#xe7;&#xe3;o</span>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Fechar menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#unidades" class="nav-link">Unidades</a></li>
+        <li><a href="#curso" class="nav-link">O Curso</a></li>
+        <li><a href="#pra-quem" class="nav-link">Para Quem?</a></li>
+        <li><a href="#ganhos" class="nav-link">Ganhos</a></li>
+        <li><a href="#precos" class="nav-link">Pre&#xe7;os</a></li>
+        <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero no-img">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">&#x1F680; Inscri&#xe7;&#xf5;es Abertas &#xb7; Vagas Limitadas</div>
+          <h1>Transforme sua Paix&#xe3;o pelos Pets em uma <span class="text-gradient">Profiss&#xe3;o</span></h1>
+          <p class="hero-subtitle">Aprenda Banho e Tosa de forma pr&#xe1;tica e personalizada, com um m&#xe9;todo desenvolvido para ensinar exatamente o que voc&#xea; precisa para atuar com seguran&#xe7;a, confian&#xe7;a e excel&#xea;ncia.</p>
+          <div class="hero-stats">
+            <div class="stat-item"><span class="stat-number">+100</span><span class="stat-text">Alunos Formados</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-number">100%</span><span class="stat-text">Pr&#xe1;tico</span></div>
+          </div>
+          <div class="hero-cta">
+            <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Quero%20me%20inscrever%20no%20Curso%20de%20Banho%20e%20Tosa%20da%20Laquiatto." class="btn btn-primary btn-glow" rel="noopener">
+              QUERO ME INSCREVER AGORA
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-wrapper">
+            <img src="hero.png" alt="Curso de Banho e Tosa Laquiatto" class="main-img opt-img" data-hide="hero" />
+            <div class="glow-effect"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIDADES -->
+    <section id="unidades" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Nossas <span class="text-gradient">Unidades</span></h2>
+          <p>Estamos localizados no cora&#xe7;&#xe3;o do ABC, com estruturas modernas para o seu aprendizado.</p>
+        </div>
+        <div class="units-grid">
+          <div class="unit-card glass">
+            <div class="unit-info">
+              <h3>Unidade 1: Santo Andr&#xe9;</h3>
+              <p>R. Nossa Sra. de F&#xe1;tima, 77 &#xb7; Para&#xed;so, Santo Andr&#xe9; &#xb7; SP, 09190-630</p>
+            </div>
+            <div class="map-container">
+              <iframe title="Mapa - Laquiatto Santo Andr&#xe9;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2110.8921305792765!2d-46.53592748477487!3d-23.67207379870629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce432177f7aff1%3A0x7f6ba6b242f33aff!2sLaquiatto%20Pet%20Store!5e0!3m2!1spt-BR!2sbr!4v1785195329219!5m2!1spt-BR!2sbr" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+          <div class="unit-card glass">
+            <div class="unit-info">
+              <h3>Unidade 2: S&#xe3;o Bernardo</h3>
+              <p>Av. Senador Vergueiro, 3170 &#xb7; Rudge Ramos, S&#xe3;o Bernardo do Campo &#xb7; SP, 09600-004</p>
+            </div>
+            <div class="map-container">
+              <iframe title="Mapa - Laquiatto S&#xe3;o Bernardo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.2266855087105!2d-46.562786125093396!3d-23.667850078726705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce439a3aed7b3d%3A0x529f0f1ac512c52a!2sLaquiatto%20Pet%20Store%20-%20S%C3%A3o%20Bernardo%20do%20Campo!5e0!3m2!1spt-BR!2sbr!4v1785197267961!5m2!1spt-BR!2sbr" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT -->
+    <section class="highlight-section">
+      <div class="container">
+        <div class="highlight-card glass">
+          <p>Venha nos visitar e confira o nosso espa&#xe7;o: estamos em locais acess&#xed;veis para toda a regi&#xe3;o do ABC, oferecendo o melhor ambiente para a sua forma&#xe7;&#xe3;o profissional!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- O CURSO -->
+    <section id="curso" class="section-padding">
+      <div class="container">
+        <div class="video-wrapper glass no-video" id="videoWrapper">
+          <div class="video-content">
+            <h2 class="section-title">Treinamento Completo de <span class="text-gradient">Banho e Tosa</span></h2>
+            <p class="video-description">Descubra tudo o que voc&#xea; precisa saber para iniciar com confian&#xe7;a na &#xe1;rea de est&#xe9;tica animal! Aprenda t&#xe9;cnicas de banho, tosa, manuseio seguro e cuidados essenciais com profissionais qualificados.</p>
+            <div class="curso-topicos">
+              <span>&#x2713; Banho e secagem</span>
+              <span>&#x2713; Tosa na m&#xe1;quina e tesoura</span>
+              <span>&#x2713; Manejo seguro</span>
+              <span>&#x2713; Cuidados por ra&#xe7;a</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUEM -->
+    <section id="pra-quem" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Para Quem &#xe9; este <span class="text-gradient">Curso?</span></h2>
+          <p>Talvez voc&#xea; reconhe&#xe7;a uma dessas situa&#xe7;&#xf5;es:</p>
+        </div>
+        <div class="cards-grid">
+          <div class="info-card glass">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="6.4" cy="10.3" rx="1.9" ry="2.5"/><ellipse cx="10.4" cy="6.9" rx="1.9" ry="2.6"/><ellipse cx="14.9" cy="6.9" rx="1.9" ry="2.6"/><ellipse cx="18.6" cy="10.3" rx="1.9" ry="2.5"/><path d="M12.5 12.6c2.7 0 4.8 2 4.8 4.4 0 1.9-1.5 3.2-3.4 3.2-.9 0-1.4-.3-2.5-.3s-1.6.3-2.5.3c-1.9 0-3.4-1.3-3.4-3.2 0-2.4 2.1-4.4 4.8-4.4z"/></svg>
+            </div>
+            <h3>Ama animais, mas nunca soube como transformar isso em renda</h3>
+            <p>Cansou de ouvir "isso n&#xe3;o &#xe9; profiss&#xe3;o de verdade" e quer provar o contr&#xe1;rio: com uma carreira est&#xe1;vel, reconhecida e que paga bem.</p>
+          </div>
+          <div class="info-card glass">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6.8V12l3.5 2.1"/></svg>
+            </div>
+            <h3>Est&#xe1; insatisfeito no emprego atual e sente o tempo passando</h3>
+            <p>Um banhista qualificado j&#xe1; come&#xe7;a ganhando entre R$ 2 mil e R$ 3 mil, e um tosador chega a faturar entre R$ 2,5 mil e R$ 6 mil, enquanto muita gente segue presa num sal&#xe1;rio que n&#xe3;o sai do lugar.</p>
+          </div>
+          <div class="info-card glass">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.8"/><circle cx="6" cy="18" r="2.8"/><path d="M20 4L8.12 15.88"/><path d="M14.47 14.48L20 20"/><path d="M8.12 8.12L12 12"/></svg>
+            </div>
+            <h3>Quer se especializar antes que o mercado fique saturado</h3>
+            <p>Quem domina todas as ra&#xe7;as e t&#xe9;cnicas consegue faturar at&#xe9; R$ 8 mil. Hoje ainda h&#xe1; poucos profissionais nesse n&#xed;vel: quem se capacita agora, sai na frente.</p>
+          </div>
+          <div class="info-card glass">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6.5l-8 8-4-4-7 7"/><path d="M16.5 6.5H22V12"/></svg>
+            </div>
+            <h3>Tem medo de investir em algo sem retorno</h3>
+            <p>O Brasil &#xe9; o 3&#xba; maior mercado pet do mundo: a demanda &#xe9; real, o ganho &#xe9; real, e s&#xf3; cresce.</p>
+          </div>
+        </div>
+        <div class="center-cta">
+          <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Quero%20mudar%20de%20vida%20com%20o%20Curso%20de%20Banho%20e%20Tosa%20da%20Laquiatto." class="btn btn-primary btn-glow" rel="noopener">
+            QUERO MUDAR DE VIDA AGORA
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GANHOS -->
+    <section id="ganhos" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Sua Nova Renda Pode <span class="text-gradient">Come&#xe7;ar Aqui</span></h2>
+          <p>Quanto voc&#xea; pode ganhar nessa profiss&#xe3;o:</p>
+        </div>
+        <div class="ganhos-card glass">
+          <div class="ganhos-row">
+            <div class="ganhos-nivel">
+              <span class="g-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
+              <div><h4>Banhista</h4><small>Primeiro passo na profiss&#xe3;o</small></div>
+            </div>
+            <div class="ganhos-valor text-gradient">R$ 2.000 a R$ 3.000</div>
+          </div>
+          <div class="ganhos-row">
+            <div class="ganhos-nivel">
+              <span class="g-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
+              <div><h4>Tosador</h4><small>Dom&#xed;nio das t&#xe9;cnicas de tosa</small></div>
+            </div>
+            <div class="ganhos-valor text-gradient">R$ 2.500 a R$ 6.000</div>
+          </div>
+          <div class="ganhos-row">
+            <div class="ganhos-nivel">
+              <span class="g-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 22l5-3 5 3-1.21-8.11"/></svg></span>
+              <div><h4>Tosador especialista</h4><small>Todas as ra&#xe7;as e t&#xe9;cnicas</small></div>
+            </div>
+            <div class="ganhos-valor text-gradient">At&#xe9; R$ 8.000</div>
+          </div>
+        </div>
+        <p class="ganhos-nota">N&#xe3;o &#xe9; sobre ganhar um dinheiro extra no fim do m&#xea;s. &#xc9; sobre construir uma <strong>profiss&#xe3;o que paga de verdade</strong> e que voc&#xea; pode levar pra qualquer cidade do Brasil.</p>
+        <div class="center-cta">
+          <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Quero%20essa%20renda%20pra%20mim.%20Como%20funciona%20o%20Curso%20de%20Banho%20e%20Tosa%3F" class="btn btn-primary btn-glow" rel="noopener">
+            QUERO ESSA RENDA PRA MIM
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECOS -->
+    <section id="precos" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Escolha seu <span class="text-gradient">Plano</span></h2>
+          <p>Investimento que cabe no seu bolso, com retorno garantido.</p>
+        </div>
+        <p class="invest-hook">Olha o retorno: com o que um tosador especialista pode faturar por m&#xea;s, o investimento no curso se paga r&#xe1;pido, e o conhecimento fica com voc&#xea; para sempre.</p>
+        <div class="pricing-grid">
+          <div class="price-card glass">
+            <h3>Banhista</h3>
+            <div class="price-value">Consulte</div>
+            <ul class="price-features">
+              <li>Banho</li>
+              <li>Tosa Higi&#xea;nica</li>
+              <li>Corte de Unhas</li>
+              <li>Manejo do C&#xe3;o</li>
+            </ul>
+            <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Quero%20saber%20o%20valor%20do%20curso%20Banhista." class="btn" rel="noopener">QUERO SABER O VALOR</a>
+          </div>
+          <div class="price-card glass">
+            <h3>Iniciante</h3>
+            <div class="price-value">Consulte</div>
+            <ul class="price-features">
+              <li>Banho e Tosa Higi&#xea;nica</li>
+              <li>Corte de Unhas e Manejo do C&#xe3;o</li>
+              <li>Remo&#xe7;&#xe3;o de Subpelos e N&#xf3;s</li>
+              <li>Escova&#xe7;&#xe3;o dos Dentes</li>
+              <li>Hidrata&#xe7;&#xe3;o</li>
+              <li>Tosa na M&#xe1;quina e Tesoura</li>
+              <li>Primeiros Socorros</li>
+            </ul>
+            <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Quero%20saber%20o%20valor%20do%20curso%20Iniciante." class="btn" rel="noopener">QUERO SABER O VALOR</a>
+          </div>
+          <div class="price-card glass featured">
+            <span class="featured-label">MAIS PROCURADO</span>
+            <h3>Intermedi&#xe1;rio</h3>
+            <div class="price-value">Consulte</div>
+            <ul class="price-features">
+              <li>Tosas na M&#xe1;quina</li>
+              <li>Tosas na Tesoura</li>
+              <li>T&#xe9;cnicas de Tosa</li>
+              <li>Prepara&#xe7;&#xe3;o da Pelagem para a Tosa</li>
+            </ul>
+            <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Quero%20saber%20o%20valor%20do%20curso%20Intermedi%C3%A1rio." class="btn" rel="noopener">QUERO SABER O VALOR</a>
+          </div>
+          <div class="price-card glass">
+            <h3>Avan&#xe7;ado</h3>
+            <div class="price-value">Consulte</div>
+            <ul class="price-features">
+              <li>Tosas Espec&#xed;ficas na Tesoura</li>
+              <li>T&#xe9;cnicas de Manejo da Tesoura</li>
+            </ul>
+            <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Quero%20saber%20o%20valor%20do%20curso%20Avan%C3%A7ado." class="btn" rel="noopener">QUERO SABER O VALOR</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSOR -->
+    <section id="professor" class="section-padding">
+      <div class="container">
+        <div class="professor-card glass no-img" id="professorCard">
+          <div class="professor-img">
+            <img src="professor.webp" alt="Coordenador William" class="opt-img" data-hide="professor" />
+            <div class="img-glow"></div>
+          </div>
+          <div class="professor-info">
+            <span class="label">Coordenador do Curso</span>
+            <h3>William</h3>
+            <p class="professor-bio">Meu nome &#xe9; William e sou o coordenador do Curso de Banho e Tosa da Laquiatto. Ao longo da minha trajet&#xf3;ria, entendi que ensinar vai muito al&#xe9;m de passar t&#xe9;cnicas. Minha miss&#xe3;o &#xe9; formar profissionais preparados para o mercado, com conhecimento, confian&#xe7;a e responsabilidade. Todos os meses temos a alegria de formar novos alunos, e cada um recebe um acompanhamento pensado para desenvolver habilidades reais, desde os fundamentos at&#xe9; as t&#xe9;cnicas mais importantes da profiss&#xe3;o. Na Laquiatto, nosso conceito &#xe9; ir al&#xe9;m do b&#xe1;sico: n&#xe3;o queremos apenas ensinar como dar um banho ou realizar uma tosa, queremos entregar tudo o que o aluno realmente precisa para iniciar sua carreira com seguran&#xe7;a, qualidade e se destacar no mercado. Ver nossos alunos conquistando espa&#xe7;o na profiss&#xe3;o &#xe9; o que nos motiva a evoluir todos os dias. Mais do que um curso, oferecemos uma oportunidade de transforma&#xe7;&#xe3;o e um caminho para construir uma carreira de sucesso.</p>
+            <div class="professor-features">
+              <span>&#x2713; Metodologia &#xda;nica</span>
+              <span>&#x2713; Suporte P&#xf3;s-Curso</span>
+              <span>&#x2713; Foco em Pr&#xe1;tica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">O que dizem nossos <span class="text-gradient">Alunos</span></h2>
+        </div>
+        <div class="testimonials-slider-wrapper">
+          <div class="testimonials-slider" id="testimonialsSlider">
+            <div class="testimonial-card glass">
+              <p class="testimonial-text">"O curso Laquiatto &#xe9; incr&#xed;vel! Fui muito bem recebida e aprendi bastante coisa: tipos de pelagem, tosa na m&#xe1;quina, com adaptador... Peguei v&#xe1;rias dicas diferentes que com certeza v&#xe3;o me ajudar muito no futuro. S&#xf3; tenho a agradecer a voc&#xea;s por tanto e pela oportunidade. Muito obrigada! &#x1F436;&#x1FAF6;"</p>
+              <div class="testimonial-author">Mikele<small>Aluna formada</small></div>
+            </div>
+            <div class="testimonial-card glass">
+              <p class="testimonial-text">"Eu fiz o curso e super indico. Tirei muitas d&#xfa;vidas que eu tinha e, hoje, realizo minhas tosas com muito mais seguran&#xe7;a."</p>
+              <div class="testimonial-author">Jandira<small>Aluna formada</small></div>
+            </div>
+            <div class="testimonial-card glass">
+              <p class="testimonial-text">"Gostaria de agradecer &#xe0; Laquiatto pelo conhecimento adquirido. O curso foi excelente, com profissionais qualificados. Eu n&#xe3;o sabia nada e sa&#xed; preparada para o mercado pet. Muito obrigada a todos os envolvidos no meu aprendizado!"</p>
+              <div class="testimonial-author">Flavia<small>Aluna formada</small></div>
+            </div>
+            <div class="testimonial-card glass">
+              <p class="testimonial-text">"Fazer o curso de Banho e Tosa na Laquiatto foi uma experi&#xea;ncia incr&#xed;vel! Aprendi muitas coisas sobre como cuidar dos animais e deix&#xe1;-los ainda mais lindos. Sempre simp&#xe1;ticos e atenciosos, me ensinaram as t&#xe9;cnicas e todas as medidas de seguran&#xe7;a essenciais para o conforto dos animais."</p>
+              <div class="testimonial-author">Gabrielly<small>Aluna formada</small></div>
+            </div>
+          </div>
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Perguntas <span class="text-gradient">Frequentes</span></h2>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item glass" style="background:transparent;border:none;">
+            <button class="faq-question" type="button">Quais s&#xe3;o os hor&#xe1;rios?<span class="faq-sinal">+</span></button>
+            <div class="faq-answer"><div><strong>&#x2022; Iniciante:</strong> 2&#xaa;-feira (Online), 3&#xaa; a 5&#xaa; (Presencial: 9h-13h ou 14h-18h). Conclus&#xe3;o em menos de 1 m&#xea;s. S&#xe1;bados: 8h-12h (6 s&#xe1;bados + 4 aulas online).<br><br><strong>&#x2022; Intermedi&#xe1;rio e Avan&#xe7;ado:</strong> 3&#xaa; a 5&#xaa; (Presencial: 9h-13h ou 14h-18h). Conclus&#xe3;o em menos de 1 m&#xea;s.<br><br>Os hor&#xe1;rios podem ser adaptados conforme sua necessidade dentro do nosso funcionamento.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">Quais s&#xe3;o os conte&#xfa;dos dos cursos?<span class="faq-sinal">+</span></button>
+            <div class="faq-answer"><div>Nossos cursos abrangem desde o manuseio b&#xe1;sico, banho e secagem at&#xe9; t&#xe9;cnicas avan&#xe7;adas de tosa na m&#xe1;quina, tesoura e adapta&#xe7;&#xe3;o por ra&#xe7;a, al&#xe9;m de cuidados com a sa&#xfa;de e o bem-estar animal.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">Preciso ter experi&#xea;ncia pr&#xe9;via?<span class="faq-sinal">+</span></button>
+            <div class="faq-answer"><div>N&#xe3;o! O curso Iniciante &#xe9; desenhado justamente para quem est&#xe1; come&#xe7;ando do zero absoluto. N&#xf3;s ensinamos tudo o que voc&#xea; precisa saber.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">O curso oferece certificado?<span class="faq-sinal">+</span></button>
+            <div class="faq-answer"><div>Sim, ao concluir o curso voc&#xea; recebe um certificado profissional da Laquiatto, reconhecido no mercado pet.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.webp" alt="Laquiatto" class="footer-logo" />
+          <p>Formando os melhores profissionais de est&#xe9;tica animal do ABC.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Links R&#xe1;pidos</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#unidades">Unidades</a></li>
+            <li><a href="#ganhos">Ganhos</a></li>
+            <li><a href="#precos">Pre&#xe7;os</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Nos Siga</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/laquiatto_pet_store/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.51.01-4.75.07-.9.04-1.38.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.33-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.04.9.19 1.38.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.33.13.81.28 1.71.32 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.9-.04 1.38-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.33.28-.81.32-1.71.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.19-1.38-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.33-.13-.81-.28-1.71-.32C15.51 4.01 15.14 4 12 4zm0 3.06A4.94 4.94 0 1 0 12 17a4.94 4.94 0 0 0 0-9.88zm0 8.15A3.21 3.21 0 1 1 12 8.8a3.21 3.21 0 0 1 0 6.41zm6.29-8.35a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Laquiatto Pet Store &#xb7; Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5511915180843?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Curso%20de%20Banho%20e%20Tosa." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    /* Header scroll */
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    /* Mobile nav */
+    var menuIcon = document.getElementById('mobileMenuIcon');
+    var mobileNav = document.getElementById('mobileNav');
+    var backdrop = document.getElementById('mobileBackdrop');
+    var navClose = document.getElementById('mobileNavClose');
+
+    function abrirMenu() { mobileNav.classList.add('open'); backdrop.classList.add('active'); menuIcon.setAttribute('aria-expanded', 'true'); }
+    function fecharMenu() { mobileNav.classList.remove('open'); backdrop.classList.remove('active'); menuIcon.setAttribute('aria-expanded', 'false'); }
+    menuIcon.addEventListener('click', abrirMenu);
+    navClose.addEventListener('click', fecharMenu);
+    backdrop.addEventListener('click', fecharMenu);
+    mobileNav.querySelectorAll('.nav-link').forEach(function(l) { l.addEventListener('click', fecharMenu); });
+
+    /* Imagens/video opcionais: some o elemento se o arquivo nao existir */
+    document.querySelectorAll('.opt-img').forEach(function(img) {
+      img.addEventListener('error', function() {
+        var alvo = img.getAttribute('data-hide');
+        if (alvo === 'hero') document.querySelector('.hero').classList.add('no-img');
+        else if (alvo === 'professor') document.getElementById('professorCard').classList.add('no-img');
+        img.style.display = 'none';
+      });
+      img.addEventListener('load', function() {
+        var alvo = img.getAttribute('data-hide');
+        if (alvo === 'hero') document.querySelector('.hero').classList.remove('no-img');
+        else if (alvo === 'professor') document.getElementById('professorCard').classList.remove('no-img');
+      });
+    });
+    /* Depoimentos slider */
+    var slider = document.getElementById('testimonialsSlider');
+    var slides = slider.children;
+    var dotsWrap = document.getElementById('sliderDots');
+    var slideAtual = 0;
+    var totalSlides = slides.length;
+    var autoTimer = null;
+
+    for (var i = 0; i < totalSlides; i++) {
+      (function(idx) {
+        var b = document.createElement('button');
+        b.className = 'dot' + (idx === 0 ? ' active' : '');
+        b.setAttribute('aria-label', 'Depoimento ' + (idx + 1));
+        b.addEventListener('click', function() { irSlide(idx); reiniciarAuto(); });
+        dotsWrap.appendChild(b);
+      })(i);
+    }
+
+    function irSlide(i) {
+      slideAtual = (i + totalSlides) % totalSlides;
+      slider.style.transform = 'translateX(-' + (slideAtual * 100) + '%)';
+      dotsWrap.querySelectorAll('.dot').forEach(function(d, idx) { d.classList.toggle('active', idx === slideAtual); });
+    }
+    function reiniciarAuto() { clearInterval(autoTimer); autoTimer = setInterval(function() { irSlide(slideAtual + 1); }, 6000); }
+    reiniciarAuto();
+
+    /* Swipe no slider */
+    var tx = 0;
+    slider.addEventListener('touchstart', function(e) { tx = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', function(e) {
+      var diff = tx - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { irSlide(slideAtual + (diff > 0 ? 1 : -1)); reiniciarAuto(); }
+    }, { passive: true });
+
+    /* FAQ accordion */
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var item = q.parentNode;
+        var estava = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(f) { f.classList.remove('active'); });
+        if (!estava) item.classList.add('active');
+      });
+    });
+
+    /* Ano no rodape */
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) clearInterval(autoTimer); else reiniciarAuto();
+    });
+  </script>
+
+  <!-- Google Tag Manager (carregamento adiado) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function loadGTM() {
+      if (window._gtmLoaded) return;
+      window._gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG65KK9');
+    }
+    ['mousedown','keydown','touchstart','scroll','mousemove'].forEach(function(e){
+      document.addEventListener(e, loadGTM, {once:true, passive:true});
+    });
+    setTimeout(loadGTM, 3500);
+  </script>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG65KK9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+</body>
+</html>
