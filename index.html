@@ -16,9 +16,12 @@
   <script>
     document.documentElement.className += ' js';
     /* GTM carregado na primeira interacao (ou 3,5s) para nao travar o carregamento */
+    /* GTM no carregamento (23/11/2026): o GTM sai do carregamento adiado para nao perder o clique de quem toca no botao logo ao entrar; so o Clarity espera a primeira interacao */
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG65KK9');
+    /* clique em qualquer link de WhatsApp vai para a fila do dataLayer (evento whatsapp_click), mesmo que o GTM ainda esteja carregando */
+    document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href*="wa.me"],a[href*="api.whatsapp.com"]');if(!a)return;window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'whatsapp_click',wpp_botao:String(a.className||''),wpp_link:a.href});},true);
     function _loadTags(){
       if(window._tagsLoaded)return;window._tagsLoaded=1;
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG65KK9');
     }
     ['click','touchstart','scroll','keydown'].forEach(function(e){window.addEventListener(e,_loadTags,{once:true,passive:true});});
     setTimeout(_loadTags,3500);
